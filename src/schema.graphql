@@ -1,0 +1,57 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  """Globally unique identifier"""
+  id: ID!
+
+  """Date the object was created"""
+  created: DateTime!
+
+  """Date the object was last updated"""
+  updated: DateTime!
+  name: String!
+
+  """User's role, specifying their access level"""
+  role: UserRole!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+"""Permissions the user has"""
+enum UserRole {
+  USER
+  STAFF
+  ADMIN
+}
+
+type Query {
+  """Get a single user"""
+  user(id: String!): User
+
+  """Get list of users"""
+  users: [User!]!
+}
+
+type Mutation {
+  """Creates a user"""
+  userCreate(input: UserCreateInput!): User!
+
+  """Update an existing user object"""
+  userUpdate(input: UserUpdateInput!, id: ID!): User
+
+  """Delete existing user"""
+  userDelete(id: ID!): Boolean
+}
+
+input UserCreateInput {
+  name: String!
+}
+
+input UserUpdateInput {
+  name: String!
+}
