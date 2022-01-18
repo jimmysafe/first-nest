@@ -1,6 +1,7 @@
 import { Field, ObjectType, registerEnumType } from '@nestjs/graphql';
 import { Column, Entity } from 'typeorm';
 import { Node } from '../common/base.entity';
+import fs from 'fs';
 
 export enum UserRole {
   /**
