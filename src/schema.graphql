@@ -35,6 +35,7 @@ type Query {
 
   """Get list of users"""
   users: [User!]!
+  testAuth: [User!]!
 }
 
 type Mutation {
