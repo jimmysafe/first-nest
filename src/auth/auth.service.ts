@@ -4,7 +4,7 @@ import {
   Injectable,
   UnauthorizedException,
 } from '@nestjs/common';
-import { User, UserRole } from '../user/user.entity';
+import { UserRole } from '../user/user.entity';
 import { UserService } from '../user/user.service';
 
 export type AuthUser = {

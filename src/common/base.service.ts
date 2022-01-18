@@ -1,4 +1,4 @@
-import { DeepPartial, Repository } from 'typeorm';
+import { Repository } from 'typeorm';
 import { Node } from './base.entity';
 
 export interface IBaseService<T, C, U> {
