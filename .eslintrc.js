@@ -31,7 +31,6 @@ module.exports = {
     'import/no-cycle': 'off',
     'no-nested-ternary': 'off',
     'import/no-extraneous-dependencies': 'off',
-    'jsx-a11y/accessible-emoji': 'warn',
     'consistent-return': 'off',
     'no-underscore-dangle': 'off',
     'no-return-await': 'off',
